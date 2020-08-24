@@ -1,5 +1,7 @@
 package zadatak;
 
+import javax.swing.JOptionPane;
+
 public class SpiralnaMatrica {
 
 		static int MAX = 100; 
@@ -44,17 +46,15 @@ public class SpiralnaMatrica {
 
 
 		public static void main(String[] args) { 
-			int m = 10, n = 10; 
+			int m =Integer.parseInt(JOptionPane.showInputDialog("Unesi prvi stupaca"));
+			int n = Integer.parseInt(JOptionPane.showInputDialog("Unesi drugi redaka")); 
 			int a[][] = new int[MAX][MAX]; 
 			spiralnaMatrica(m, n, a); 
 			for (int i = 0; i < m; i++) { 
 				for (int j = 0; j < n; j++) { 
-					System.out.print(a[i][j] + " "); 
+					System.out.print(a[i][j] + " ");
 				} 
 				System.out.println(""); 
 			} 
 		} 
 	}
-
-
-
